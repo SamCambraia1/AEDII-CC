@@ -303,21 +303,17 @@ public class classe {
 
             if (operacao[0].charAt(0) == 'I') {
 
+                ply = new Player();
+                tratamentoString(leituraArquivo(operacao[1]));
 
-
-                    ply = new Player();
-                    tratamentoString(leituraArquivo(operacao[1]));
-
-                    list.inserirFim(ply);
+                list.inserirFim(ply);
 
             } // end if insercao
 
             if (operacao[0].charAt(0) == 'R') {
 
-
-                    Player temp = list.removerFim();
-                    System.out.println("(R) "+ temp.getNome());
-              
+                Player temp = list.removerFim();
+                System.out.println("(R) " + temp.getNome());
 
             } // end if remocao
             count++;
